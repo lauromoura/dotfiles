@@ -19,4 +19,6 @@ Currently just git and nvim info. Didn't fiddle with fish configuration to justi
 * Keyboard (abnt2): add `KEYMAP=br-abnt2` to `/etc/vconsole.conf`
 * Install vbox guests: `pacman -S virtualbox-guest-utils-nox` (Default kernel, choose `virtualbox-guest-modules-arch` provider)
 * SSH port forwarding (3022 on host, 22 on guest): With the vm stopped, run on the host `VBoxManage modifyvm <vm name> --natpf1 "ssh,tcp,,3022,,22"`
+* When building EFL's csharp bindings, mono may complain about bad magic number, due to a [ncurses-related bug](https://github.com/mono/mono/issues/6752),
+  due to be fixed in mono 5.12. Until them, use `TERM=xterm`.
 
