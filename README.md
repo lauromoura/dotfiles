@@ -19,7 +19,3 @@ Currently just git and nvim info. Didn't fiddle with fish configuration to justi
 * Install vbox guests: `pacman -S virtualbox-guest-utils-nox` (Default kernel, choose `virtualbox-guest-modules-arch` provider)
 * SSH port forwarding (3022 on host, 22 on guest): With the vm stopped, run on the host `VBoxManage modifyvm <vm name> --natpf1 "ssh,tcp,,3022,,22"`
 
-# TODO
-
-* oh-my-fish (bobthefish)
-* fzf
