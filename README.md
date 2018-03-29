@@ -7,6 +7,7 @@ Currently just git and nvim info. Didn't fiddle with fish configuration to justi
 
 * `pull_changes.sh` Updates the repo with the info from the current used files.
 * `push_changes.sh` Copies the files from the repo to the system.
+* `install_essentials_ubuntu.sh` Installs fish, neovim and configure them.
 
 # Other toolbox stuff
 
