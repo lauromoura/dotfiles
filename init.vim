@@ -52,6 +52,8 @@ Plug 'kshenoy/vim-signature'
 
 Plug 'w0rp/ale'
 
+Plug 'wakatime/vim-wakatime'
+
 " Plug 'cjrh/vim-conda'
 
 " Plug 'ctrlpvim/ctrlp.vim'
