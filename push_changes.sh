@@ -13,4 +13,8 @@ cp    -R ./nvim-after/*       ~/.config/nvim/after
 mkdir -p ~/.config/nvim/syntax
 cp    -R ./nvim-syntax/*      ~/.config/nvim/syntax
 
+# Fish
+mkdir -p ~/.config/fish/functions
+cp    -R ./functions/* ~/.config/fish/functions/
+
 echo "dotfiles updated."
