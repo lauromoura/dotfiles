@@ -1,6 +1,7 @@
 set number
 set relativenumber
 set t_Co=256
+set termguicolors
 let g:solarized_termtrans=1
 let g:solarized_termcolors=256
 
@@ -14,6 +15,7 @@ set incsearch
 set scrolloff=5
 
 let mapleader = ","
+nnoremap <leader><tab> :b#<CR>
 
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -33,7 +35,14 @@ Plug 'junegunn/fzf.vim'
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split' }
 
+
 " Plug 'OmniSharp/omnisharp-vim'
+
+Plug 'luochen1990/rainbow'
+
+let g:rainbow_active = 1
+
+" Plug 'dart-lang/dart-vim-plugin'
 
 Plug 'OrangeT/vim-csharp'
 
@@ -51,8 +60,10 @@ Plug 'tpope/vim-commentary'
 Plug 'kshenoy/vim-signature'
 
 Plug 'w0rp/ale'
+let g:ale_sign_column_always = 1
 
-Plug 'wakatime/vim-wakatime'
+"Plug 'wakatime/vim-wakatime'
+" Plug '~/dev/vim-wakatime'
 
 " Plug 'cjrh/vim-conda'
 
@@ -77,6 +88,8 @@ let g:ackprg = 'ag -S --nogroup --column'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+
+Plug 'chriskempson/tomorrow-theme'
 Plug 'flazz/vim-colorschemes'
 let g:airline_powerline_fonts = 1
 let g:airlinetheme = "solarized"
@@ -107,14 +120,20 @@ Plug 'slashmili/alchemist.vim'
 
 Plug 'jeetsukumaran/vim-buffergator'
 
+Plug 'rust-lang/rust.vim'
+
+Plug 'rhysd/vim-wasm'
 
 let g:alchemist_tag_disable = 1
 
 call plug#end()
 
+highlight ALEWarning ctermbg=Black
+
 set bg=dark
 " colorscheme solarized
-colorscheme molokai_dark
+" colorscheme molokai_dark
+colorscheme Tomorrow-Night-Bright
 
 set list
 set listchars=tab:›\ ,trail:.
@@ -128,3 +147,8 @@ hi MatchParen cterm=bold ctermbg=green ctermfg=black
 
 autocmd BufNewFile,BufRead *.am set filetype=automake
 autocmd BufNewFile,BufRead meson.build set filetype=meson
+
+"if &term =~ '256color'
+"  "disable BCE to make it work in tmux
+"  set t_ut=
+"endif
