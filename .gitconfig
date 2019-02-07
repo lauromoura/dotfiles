@@ -2,4 +2,4 @@
 	email = lauromoura@gmail.com
 	name = Lauro Moura
 [core]
-	editor = vim
+	editor = nvim

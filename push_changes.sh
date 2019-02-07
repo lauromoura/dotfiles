@@ -17,4 +17,7 @@ cp    -R ./nvim-syntax/*      ~/.config/nvim/syntax
 mkdir -p ~/.config/fish/functions
 cp    -R ./functions/* ~/.config/fish/functions/
 
+# Emmett snippets
+cp    -R ./.snippets_custom.json ~/.snippets_custom.json
+
 echo "dotfiles updated."

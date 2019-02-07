@@ -14,3 +14,6 @@ cp    -R ~/.config/nvim/syntax/* ./nvim-syntax
 cp    -R ~/.config/fish/functions .
 
 cp -R ~/.config/fish/config.fish .
+
+# Emmett snippets
+cp    -R ~/.snippets_custom.json .

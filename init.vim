@@ -62,7 +62,7 @@ Plug 'kshenoy/vim-signature'
 Plug 'w0rp/ale'
 let g:ale_sign_column_always = 1
 
-"Plug 'wakatime/vim-wakatime'
+Plug 'wakatime/vim-wakatime'
 " Plug '~/dev/vim-wakatime'
 
 " Plug 'cjrh/vim-conda'
@@ -122,18 +122,24 @@ Plug 'jeetsukumaran/vim-buffergator'
 
 Plug 'rust-lang/rust.vim'
 
+let g:rustfmt_autosave = 1
+
 Plug 'rhysd/vim-wasm'
+
+Plug 'mattn/webapi-vim'
 
 let g:alchemist_tag_disable = 1
 
 call plug#end()
 
-highlight ALEWarning ctermbg=Black
+" highlight ALEWarning ctermbg=Black
 
 set bg=dark
+" set bg=light
 " colorscheme solarized
 " colorscheme molokai_dark
 colorscheme Tomorrow-Night-Bright
+" colorscheme Tomorrow
 
 set list
 set listchars=tab:›\ ,trail:.
@@ -147,6 +153,8 @@ hi MatchParen cterm=bold ctermbg=green ctermfg=black
 
 autocmd BufNewFile,BufRead *.am set filetype=automake
 autocmd BufNewFile,BufRead meson.build set filetype=meson
+
+let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/.snippets_custom.json')), "\n"))
 
 "if &term =~ '256color'
 "  "disable BCE to make it work in tmux

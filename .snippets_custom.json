@@ -1,0 +1,31 @@
+{
+	"c" : {
+		"snippets": {
+			"pf": "printf(\"|\\n\");",
+			"pe": "fprintf(stderr, \"|\\n\");",
+			"ele": "EINA_LOG_ERR(\"|\");",
+			"main": "int main(int argc, char* argv[])\n{\n\treturn 0;\n}",
+			"idef": "#ifdef |\n|\n#endif",
+			"idelse": "#ifdef |\n|\n#else\n|\n#endif",
+			"swi": "switch(|) {\n\tcase |:\n\t\tbreak;\n\tdefaut:\n\t\tbreak;\n}",
+			"for": "for(${1};${2};${3}) {\n${4}\n}",
+			"fori": "for(int i=0; i < ${1}; i++) {\n${2}\n}",
+		}
+	},
+	"cpp" : {
+		"extends": "c"
+	},
+	"cs" : {
+		"snippets": {
+			"ele": "eina.Log.Error(\\$\"${1}\");",
+			"printf" : "Console.WriteLine(\\$\"${1}\");",
+			"main": "public static void Main()\n{\n\t${1}\n}"
+		}
+	},
+	"python" : {
+		"snippets": {
+			"ifmain": "import sys\n\ndef main(argv=None):\n\tif argv is None:\n\t\targv=sys.argv\n\nif __name__ == \"__main__\":\n\tmain()",
+		}
+	}
+	
+}
