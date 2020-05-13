@@ -18,6 +18,9 @@
 # . ~/.config/fish/completions/todotxt.fish
 
 set -xg PATH ~/.local/kitty.app/bin $PATH
+set -xg PATH ~/bin $PATH
+set -xg PATH ~/.cargo/bin $PATH
+
 
 set -xg PYENV_ROOT ~/.pyenv
 
