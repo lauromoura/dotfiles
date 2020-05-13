@@ -107,8 +107,8 @@ highlight clear SignColumn
 
 Plug 'elixir-lang/vim-elixir'
 
-Plug 'ludovicchabant/vim-gutentags'
-let g:gutentags_cache_dir = '~/.tags_cache'
+"Plug 'ludovicchabant/vim-gutentags'
+"let g:gutentags_cache_dir = '~/.tags_cache'
 
 " Plug 'neomake/neomake'
 " autocmd! BufWritePost * Neomake
@@ -136,9 +136,9 @@ call plug#end()
 
 set bg=dark
 " set bg=light
-" colorscheme solarized
+colorscheme solarized
 " colorscheme molokai_dark
-colorscheme Tomorrow-Night-Bright
+" colorscheme Tomorrow-Night-Bright
 " colorscheme Tomorrow
 
 set list
