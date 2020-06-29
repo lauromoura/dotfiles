@@ -3,3 +3,6 @@
 	name = Lauro Moura
 [core]
 	editor = nvim
+	compression = 0
+[alias]
+	tree = log --graph --decorate --pretty=oneline --abbrev-commit --all
