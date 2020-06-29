@@ -29,6 +29,14 @@ Plug 'pangloss/vim-javascript'
 
 Plug 'dag/vim-fish'
 
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+let g:LanguageClient_serverCommands = {
+  \ 'cpp': ['clangd'],
+  \ }
+
 Plug '~/.fzf'
 Plug 'junegunn/fzf.vim'
 
