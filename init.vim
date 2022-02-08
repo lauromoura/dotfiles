@@ -25,17 +25,14 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 
+Plug 'autozimu/LanguageClient-neovim', {
+  \ 'branch': 'next',
+  \ 'do': 'bash install.sh',
+  \ }
+
 Plug 'pangloss/vim-javascript'
 
 Plug 'dag/vim-fish'
-
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
-let g:LanguageClient_serverCommands = {
-  \ 'cpp': ['clangd'],
-  \ }
 
 Plug '~/.fzf'
 Plug 'junegunn/fzf.vim'
@@ -43,14 +40,12 @@ Plug 'junegunn/fzf.vim'
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split' }
 
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
-" Plug 'OmniSharp/omnisharp-vim'
 
 Plug 'luochen1990/rainbow'
 
 let g:rainbow_active = 1
-
-" Plug 'dart-lang/dart-vim-plugin'
 
 Plug 'OrangeT/vim-csharp'
 
@@ -70,25 +65,6 @@ Plug 'kshenoy/vim-signature'
 Plug 'w0rp/ale'
 let g:ale_sign_column_always = 1
 
-Plug 'wakatime/vim-wakatime'
-" Plug '~/dev/vim-wakatime'
-
-" Plug 'cjrh/vim-conda'
-
-" Plug 'ctrlpvim/ctrlp.vim'
-
-" if executable('ag')
-" 	let g:ctrlp_user_command = 'ag %s --files-with-matches -g "" --ignore "\.git$\|\.hg$\|\.svn$"'
-" 	let g:ctrlp_use_caching = 0
-" else
-" 	let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
-" 	let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others']
-" endif
-
-" let g:ctrlp_working_path_mode = 0
-" let g:ctrlp_switch_buffer = 'e'
-
-" ack.vim: ack integration
 Plug 'mileszs/ack.vim'
 let g:ackprg = 'ag -S --nogroup --column'
 
@@ -136,14 +112,16 @@ Plug 'rhysd/vim-wasm'
 
 Plug 'mattn/webapi-vim'
 
+Plug 'jceb/vim-orgmode'
+
 let g:alchemist_tag_disable = 1
 
 call plug#end()
 
 " highlight ALEWarning ctermbg=Black
 
-set bg=dark
-" set bg=light
+" set bg=dark
+set bg=light
 colorscheme solarized
 " colorscheme molokai_dark
 " colorscheme Tomorrow-Night-Bright
@@ -168,3 +146,9 @@ let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/.snippets
 "  "disable BCE to make it work in tmux
 "  set t_ut=
 "endif
+"
+
+set hidden
+let g:LanguageClient_serverCommands = {
+  \ 'rust': ['rust-analyzer'],
+  \ }
