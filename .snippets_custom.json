@@ -12,6 +12,7 @@
 			"fori": "for(int i=0; i < ${1}; i++) {\n${2}\n}",
 			"perror": "fprintf(stderr, \"${1}\n\");",
 			"fprintf": "fprintf(stderr, \"%s %s %d |\\n\", __FILE__, __FUNCTION__, __LINE__);",
+			"fprintfpid": "fprintf(stderr, \"%d %s %s %d |\\n\", getpid(), __FILE__, __FUNCTION__, __LINE__);",
 		}
 	},
 	"cpp" : {
@@ -27,6 +28,7 @@
 	"python" : {
 		"snippets": {
 			"ifmain": "import sys\n\ndef main(argv=None):\n\tif argv is None:\n\t\targv=sys.argv\n\nif __name__ == \"__main__\":\n\tmain()",
+			"ifargs": "import argparse\n\n\ndef parse_args():\n\tparser = argparse.ArgumentParser()\n\n\treturn parser.parse_args()\n\n\ndef main():\n\targs = parse_args()\n\n\nif __name__ == \"__main__\":\n\tmain()"
 		}
 	}
 	
