@@ -3,6 +3,26 @@
 	name = Lauro Moura
 [core]
 	editor = nvim
+	pager = delta
 [alias]
 	tree = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	co = checkout
+	fo = fetch origin
+	lsbranch = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+	rom = rebase origin/main
+	ru = remote update
+	st = status
+	diffbranch = diff origin/main...HEAD
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true # use n and N to move between diff sections
+	light = true
+	line-numbers = true
 
+[merge]
+	conflictstyle = diff3
+[diff]
+	colorMoved = default
+[init]
+	defaultBranch = main
